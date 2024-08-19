@@ -75,7 +75,11 @@ const Footer = () => {
             Adrian
           </a>
           . Made By{" "}
-          <a href="#" className="text-sunsetOrange">
+          <a
+            href="https://github.com/MuhammadHammad-github"
+            target="_blank"
+            className="text-sunsetOrange"
+          >
             Muhammad Hammad
           </a>
         </p>
