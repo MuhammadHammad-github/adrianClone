@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Catamaran", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-[600];
+}
+h1 {
+  @apply text-[45px] font-poppins;
+}
+h2 {
+  @apply text-[38px] font-poppins;
+}
+h3 {
+  @apply text-[1.75rem];
+}
+h4 {
+  @apply text-[22px];
+}
+h5 {
+  @apply text-[20px];
+}
+p {
+  @apply font-sourceSans text-gray;
+}
+a {
+  @apply text-[17px];
+}
+.respPx20 {
+  @apply 900px:px-20 700px:px-16 550px:px-10 400px:px-5 px-3;
+}
+.transitional {
+  @apply transition-all duration-300 ease-in-out;
+}
+.transitional:hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+.btn {
+  @apply transition-all duration-300 ease-in-out w-full text-center py-[10px] font-[600];
+}
+.btn1 {
+  @apply bg-transparent border-2 border-black hover:border-sunsetOrange text-black hover:text-white hover:bg-sunsetOrange;
+}
+.btn2 {
+  @apply bg-sunsetOrange hover:bg-transparent border-2 border-sunsetOrange text-white hover:text-sunsetOrange;
+}
+.btn3 {
+  @apply px-10 !py-4 text-lg hover:!bg-sunsetOrange !w-max bg-black text-white;
+}
+.heroSlide1,
+.heroSlide2,
+.heroSlide3 {
+  @apply bg-lightGray;
+}
+
+@media only screen and (min-width: 700px) {
+  .heroSlide1 {
+    background-image: url("https://demo.themefisher.com/adrian-bootstrap/images/slider/slideshow1-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% center;
+  }
+  .heroSlide2 {
+    background-image: url("https://demo.themefisher.com/adrian-bootstrap/images/slider/slideshow1-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% center;
+  }
+  .heroSlide3 {
+    background-image: url("https://demo.themefisher.com/adrian-bootstrap/images/slider/slideshow1-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% center;
+  }
+}
+button {
+  @apply font-[600];
+}
+.heroBtn:hover::before {
+  @apply border-black;
+}
+.heroBtn::before {
+  content: "";
+  @apply absolute w-full h-full border-2 border-sunsetOrange transitional -top-2 -left-2;
+}
+.resp3ColGrid {
+  @apply grid 1000px:grid-cols-3 650px:grid-cols-2 grid-cols-1;
+}
+.resp4ColGrid {
+  @apply grid 950px:grid-cols-4 750px:grid-cols-3 500px:grid-cols-2 grid-cols-1;
+}
+.headingWithUnderline {
+  @apply relative;
+}
+.headingWithUnderline::after {
+  content: "";
+  @apply absolute top-11 left-0 w-[25%] h-[2px] bg-sunsetOrange;
+}
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.customDot {
+  opacity: 0.4;
+  @apply transition-all ease-in-out;
+}
+.slick-active > .customDot {
+  opacity: 1;
+  @apply transition-all ease-in-out;
+}
+.slick-dots li {
+  width: auto;
+}
